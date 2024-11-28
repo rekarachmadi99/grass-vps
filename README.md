@@ -1,38 +1,35 @@
-# getgrass-bot
+# Grass VPS Setup Guide
 
-This repository contains the code for `getgrass-bot`, a bot designed to establish WebSocket connections through various HTTP and SOCKS proxies, specifically aimed at farming for Grass Airdrop Season 2.
+## Langkah-Langkah Instalasi
+Ikuti panduan berikut untuk menjalankan proyek **Grass VPS**:
 
-## Overview
+### 1. Clone Repository
+Clone repository ke dalam direktori lokal Anda:
+```bash
+git clone https://github.com/rekarachmadi99/grass-vps.git
+cd grass-vps
+```
 
-`getgrass-bot` connects to a specified WebSocket server using both HTTP and SOCKS proxies. It leverages the `ws` library for WebSocket communication and integrates the `https-proxy-agent` and `socks-proxy-agent` libraries for enhanced proxy support. This allows for more versatile and resilient connections, accommodating a wider range of proxy types.
+### 2. Buat File `uid.txt`
+Buat file bernama `uid.txt` di dalam direktori proyek. Isi file ini sesuai kebutuhan proyek Anda.
 
-## Installation
-install nodejs
-curl -fssL https://deb.nodesource.com/setup_19.x | sudo -E bash
-sudo apt install -y nodejs
+### 3. Install Dependencies
+Jalankan perintah berikut untuk menginstal semua dependensi yang dibutuhkan:
+```bash
+npm install
+```
 
-1. Clone this repository to your local machine:
+### 4. Jalankan Proyek
+Mulai aplikasi dengan menjalankan perintah berikut:
+```bash
+npm start
+```
 
-   ```bash
-   git clone https://github.com/dante4rt/getgrass-bot.git
-   ```
+## Catatan Tambahan
+- Pastikan Anda telah menginstal **Node.js** dan **npm** di sistem Anda sebelum memulai.
+- Jika ada masalah selama instalasi atau eksekusi, periksa log error untuk informasi lebih lanjut atau lihat dokumentasi di repository GitHub terkait.
 
-2. Navigate to the project directory:
+---
+Jika ingin memberikan donasi, silakan kirim melalui Solana: **BAvVPQKELP9gCy3MKGq7ToA7AqyogWsQoEcjbKcgZmrH**
 
-   ```bash
-   cd getgrass-bot
-   ```
-
-3. Install the required dependencies using npm:
-
-   ```bash
-   npm install
-   ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contribution
-
-If you find this project useful, please consider giving it a star on GitHub! Your support motivates further development and enhancements.
+Selamat mencoba! 🚀
