@@ -6,7 +6,7 @@ Ikuti panduan berikut untuk menjalankan proyek **Grass VPS**:
 ### 1. Clone Repository
 Clone repository ke dalam direktori lokal Anda:
 ```bash
-git clone https://github.com/rekarachmadi99/grass-vps.git
+git clone https://github.com/rekarachmadi99/grass-vps-bot.git
 cd grass-vps
 ```
 
