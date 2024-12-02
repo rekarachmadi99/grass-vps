@@ -1,19 +1,7 @@
 require("colors");
-const fs = require("fs");
 const Bot = require("./src/Bot");
 const Config = require("./src/Config");
 const { Header } = require("./src/Header");
-
-async function bacaBaris(namaFile) {
-  try {
-    const data = await fs.promises.readFile(namaFile, "utf-8");
-    console.log(`Berhasil memuat data dari ${namaFile}`.green);
-    return data.split("\n").filter(Boolean); // Menghapus baris kosong
-  } catch (error) {
-    console.error(`Gagal membaca ${namaFile}: ${error.message}`.red);
-    return [];
-  }
-}
 
 const tunda = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -40,4 +28,17 @@ async function main() {
   );
 }
 
-main().catch((error) => console.error(error));
+function startHourlyProcess() {
+  async function restartProcess() {
+    await main().catch((error) => console.error(error));
+    console.log("\nProcess finished. Restarting in 3 hour...\n");
+
+    setTimeout(() => {
+      restartProcess();
+    }, 1000 * 60 * 60 * 3);
+  }
+
+  restartProcess();
+}
+
+startHourlyProcess();
